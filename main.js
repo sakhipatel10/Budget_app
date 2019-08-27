@@ -185,7 +185,7 @@ var UIController = (function() {
 
         intt = numberSplit[0];
         if (intt.length > 3) {
-            intt = int.substr(0, intt.length - 3) + ',' + intt.substr(intt.length - 3, 3); 
+            intt = intt.substr(0, intt.length - 3) + ',' + intt.substr(intt.length - 3, 3); 
         }
 
         decimal = numberSplit[1];
@@ -252,7 +252,7 @@ var UIController = (function() {
             
             all_fields = document.querySelectorAll(DOM_Strings.input_Description + ', ' + DOM_Strings.input_Value);
             
-            fields_Arr = Array.prototype.slice.call(all_fields);
+            fields_Arr = Array.from(all_fields);
             
             fields_Arr.forEach(function(current, index, array) {
                 current.value = "";
