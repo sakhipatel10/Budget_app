@@ -242,7 +242,7 @@ var UIController = (function() {
         deleteFromList: function(select_ID) {
             
             var elemnt = document.getElementById(select_ID);
-            elemnt.parentNode.removeChild(el);
+            elemnt.parentNode.removeChild(elemnt);
             
         },
         
